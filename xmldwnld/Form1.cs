@@ -139,8 +139,12 @@ namespace xmldwnld
 
         private void xmldwnld_Load(object sender, EventArgs e)
         {
+            this.Height = Screen.PrimaryScreen.WorkingArea.Height;
+            this.Width = Screen.PrimaryScreen.WorkingArea.Width;
+            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
             var version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
-            lblVersion.Text = $"brainstorm - xmldwnld V{version.Major}.{version.Minor}.{version.Build}";
+            lblTitle.Text = $"brainstorm";
+            lblVersion.Text = $"v{version.Major}.{version.Minor}.{version.Build}";
         }
         [STAThread]
         static void Main()
@@ -148,7 +152,7 @@ namespace xmldwnld
             SplashFadeAppContext splashContext = new SplashFadeAppContext(new xmldwnld(), new Splash());
 
             splashContext.DoFadeOpen = false;
-            splashContext.DoFadeClose = true;
+            splashContext.DoFadeClose = false;
             splashContext.SecondsSplashShown = 3;
 
             Application.Run(splashContext);
