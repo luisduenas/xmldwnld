@@ -1,6 +1,6 @@
-﻿using System;
+﻿using SplashSample;
+using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Net;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
@@ -139,10 +139,24 @@ namespace xmldwnld
 
         private void xmldwnld_Load(object sender, EventArgs e)
         {
-            //var version = System.Windows.Forms.Application.ProductVersion;
             var version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
-            this.Text = $"brainstorm - xmldwnld V{version.Major}.{version.Minor}.{version.Build}";
-            //    this.Text = $"brainstorm - xmldwnld V{version}";
+            lblVersion.Text = $"brainstorm - xmldwnld V{version.Major}.{version.Minor}.{version.Build}";
+        }
+        [STAThread]
+        static void Main()
+        {
+            SplashFadeAppContext splashContext = new SplashFadeAppContext(new xmldwnld(), new Splash());
+
+            splashContext.DoFadeOpen = false;
+            splashContext.DoFadeClose = true;
+            splashContext.SecondsSplashShown = 3;
+
+            Application.Run(splashContext);
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
