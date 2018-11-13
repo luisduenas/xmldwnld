@@ -36,20 +36,23 @@
             this.menuLayout = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnDescargaXML = new System.Windows.Forms.Button();
+            this.btnIrSat = new System.Windows.Forms.Button();
+            this.btnConfig = new System.Windows.Forms.Button();
+            this.lblVersion = new System.Windows.Forms.Label();
+            this.btnExportaExcel = new System.Windows.Forms.Button();
             this.headerLayout = new System.Windows.Forms.TableLayoutPanel();
             this.btnSalir = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.btnIrSat = new System.Windows.Forms.Button();
-            this.btnConfig = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.imgConfig = new System.Windows.Forms.PictureBox();
             this.imgIrSat = new System.Windows.Forms.PictureBox();
             this.imgDescargar = new System.Windows.Forms.PictureBox();
-            this.lblVersion = new System.Windows.Forms.Label();
             this.mainLayout.SuspendLayout();
             this.contentLayout.SuspendLayout();
             this.menuLayout.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.headerLayout.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgConfig)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgIrSat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgDescargar)).BeginInit();
@@ -153,6 +156,7 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85F));
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.imgConfig, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.imgIrSat, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.btnDescargaXML, 1, 0);
@@ -160,6 +164,7 @@
             this.tableLayoutPanel1.Controls.Add(this.btnConfig, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.imgDescargar, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblVersion, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.btnExportaExcel, 1, 3);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -196,6 +201,93 @@
             this.btnDescargaXML.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDescargaXML.UseVisualStyleBackColor = false;
             this.btnDescargaXML.Click += new System.EventHandler(this.btnDescargaXML_Click);
+            // 
+            // btnIrSat
+            // 
+            this.btnIrSat.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnIrSat.BackColor = System.Drawing.Color.Transparent;
+            this.btnIrSat.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnIrSat.FlatAppearance.BorderSize = 0;
+            this.btnIrSat.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnIrSat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnIrSat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIrSat.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIrSat.ForeColor = System.Drawing.Color.White;
+            this.btnIrSat.Location = new System.Drawing.Point(25, 50);
+            this.btnIrSat.Margin = new System.Windows.Forms.Padding(0);
+            this.btnIrSat.Name = "btnIrSat";
+            this.btnIrSat.Size = new System.Drawing.Size(148, 50);
+            this.btnIrSat.TabIndex = 2;
+            this.btnIrSat.TabStop = false;
+            this.btnIrSat.Text = "Ir al SAT";
+            this.btnIrSat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnIrSat.UseVisualStyleBackColor = false;
+            this.btnIrSat.Click += new System.EventHandler(this.btnIrSat_Click);
+            // 
+            // btnConfig
+            // 
+            this.btnConfig.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnConfig.BackColor = System.Drawing.Color.Transparent;
+            this.btnConfig.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnConfig.FlatAppearance.BorderSize = 0;
+            this.btnConfig.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnConfig.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfig.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfig.ForeColor = System.Drawing.Color.White;
+            this.btnConfig.Location = new System.Drawing.Point(25, 100);
+            this.btnConfig.Margin = new System.Windows.Forms.Padding(0);
+            this.btnConfig.Name = "btnConfig";
+            this.btnConfig.Size = new System.Drawing.Size(148, 50);
+            this.btnConfig.TabIndex = 3;
+            this.btnConfig.TabStop = false;
+            this.btnConfig.Text = "Configurar carpeta descargas";
+            this.btnConfig.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConfig.UseVisualStyleBackColor = false;
+            this.btnConfig.Click += new System.EventHandler(this.btnConfig_Click);
+            // 
+            // lblVersion
+            // 
+            this.lblVersion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblVersion.AutoSize = true;
+            this.lblVersion.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVersion.ForeColor = System.Drawing.Color.White;
+            this.lblVersion.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblVersion.Location = new System.Drawing.Point(28, 200);
+            this.lblVersion.Name = "lblVersion";
+            this.lblVersion.Size = new System.Drawing.Size(142, 253);
+            this.lblVersion.TabIndex = 7;
+            this.lblVersion.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
+            // btnExportaExcel
+            // 
+            this.btnExportaExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExportaExcel.BackColor = System.Drawing.Color.Transparent;
+            this.btnExportaExcel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnExportaExcel.FlatAppearance.BorderSize = 0;
+            this.btnExportaExcel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnExportaExcel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnExportaExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExportaExcel.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExportaExcel.ForeColor = System.Drawing.Color.White;
+            this.btnExportaExcel.Location = new System.Drawing.Point(25, 150);
+            this.btnExportaExcel.Margin = new System.Windows.Forms.Padding(0);
+            this.btnExportaExcel.Name = "btnExportaExcel";
+            this.btnExportaExcel.Size = new System.Drawing.Size(148, 50);
+            this.btnExportaExcel.TabIndex = 8;
+            this.btnExportaExcel.TabStop = false;
+            this.btnExportaExcel.Text = "Exportar a Excel";
+            this.btnExportaExcel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExportaExcel.UseVisualStyleBackColor = false;
+            this.btnExportaExcel.Click += new System.EventHandler(this.btnExportaExcel_Click);
             // 
             // headerLayout
             // 
@@ -253,60 +345,22 @@
             this.lblTitle.Text = "V 0.0.01";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // btnIrSat
+            // pictureBox1
             // 
-            this.btnIrSat.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnIrSat.BackColor = System.Drawing.Color.Transparent;
-            this.btnIrSat.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnIrSat.FlatAppearance.BorderSize = 0;
-            this.btnIrSat.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnIrSat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnIrSat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIrSat.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIrSat.ForeColor = System.Drawing.Color.White;
-            this.btnIrSat.Location = new System.Drawing.Point(25, 50);
-            this.btnIrSat.Margin = new System.Windows.Forms.Padding(0);
-            this.btnIrSat.Name = "btnIrSat";
-            this.btnIrSat.Size = new System.Drawing.Size(148, 50);
-            this.btnIrSat.TabIndex = 2;
-            this.btnIrSat.TabStop = false;
-            this.btnIrSat.Text = "Ir al SAT";
-            this.btnIrSat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIrSat.UseVisualStyleBackColor = false;
-            this.btnIrSat.Click += new System.EventHandler(this.btnIrSat_Click);
-            // 
-            // btnConfig
-            // 
-            this.btnConfig.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnConfig.BackColor = System.Drawing.Color.Transparent;
-            this.btnConfig.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnConfig.FlatAppearance.BorderSize = 0;
-            this.btnConfig.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnConfig.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfig.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfig.ForeColor = System.Drawing.Color.White;
-            this.btnConfig.Location = new System.Drawing.Point(25, 100);
-            this.btnConfig.Margin = new System.Windows.Forms.Padding(0);
-            this.btnConfig.Name = "btnConfig";
-            this.btnConfig.Size = new System.Drawing.Size(148, 50);
-            this.btnConfig.TabIndex = 3;
-            this.btnConfig.TabStop = false;
-            this.btnConfig.Text = "Configuración";
-            this.btnConfig.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConfig.UseVisualStyleBackColor = false;
-            this.btnConfig.Click += new System.EventHandler(this.btnConfig_Click);
+            this.pictureBox1.Image = global::xmldwnld.Properties.Resources.import;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 153);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(19, 44);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
             // 
             // imgConfig
             // 
-            this.imgConfig.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.imgConfig.Image = global::xmldwnld.Properties.Resources.tools;
+            this.imgConfig.Image = global::xmldwnld.Properties.Resources.inbox;
             this.imgConfig.Location = new System.Drawing.Point(3, 103);
             this.imgConfig.Name = "imgConfig";
             this.imgConfig.Size = new System.Drawing.Size(19, 44);
@@ -343,21 +397,6 @@
             this.imgDescargar.TabStop = false;
             this.imgDescargar.Click += new System.EventHandler(this.btnDescargaXML_Click);
             // 
-            // lblVersion
-            // 
-            this.lblVersion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblVersion.AutoSize = true;
-            this.lblVersion.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVersion.ForeColor = System.Drawing.Color.White;
-            this.lblVersion.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblVersion.Location = new System.Drawing.Point(28, 150);
-            this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Size = new System.Drawing.Size(142, 303);
-            this.lblVersion.TabIndex = 7;
-            this.lblVersion.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            // 
             // xmldwnld
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -383,6 +422,7 @@
             this.tableLayoutPanel1.PerformLayout();
             this.headerLayout.ResumeLayout(false);
             this.headerLayout.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgConfig)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgIrSat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgDescargar)).EndInit();
@@ -407,7 +447,9 @@
         private System.Windows.Forms.PictureBox imgDescargar;
         private System.Windows.Forms.PictureBox imgIrSat;
         private System.Windows.Forms.PictureBox imgConfig;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblVersion;
+        private System.Windows.Forms.Button btnExportaExcel;
     }
 }
 
