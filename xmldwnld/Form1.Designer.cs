@@ -35,27 +35,27 @@
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.menuLayout = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.imgConfig = new System.Windows.Forms.PictureBox();
+            this.imgIrSat = new System.Windows.Forms.PictureBox();
             this.btnDescargaXML = new System.Windows.Forms.Button();
             this.btnIrSat = new System.Windows.Forms.Button();
             this.btnConfig = new System.Windows.Forms.Button();
+            this.imgDescargar = new System.Windows.Forms.PictureBox();
             this.lblVersion = new System.Windows.Forms.Label();
             this.btnExportaExcel = new System.Windows.Forms.Button();
             this.headerLayout = new System.Windows.Forms.TableLayoutPanel();
             this.btnSalir = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.imgConfig = new System.Windows.Forms.PictureBox();
-            this.imgIrSat = new System.Windows.Forms.PictureBox();
-            this.imgDescargar = new System.Windows.Forms.PictureBox();
             this.mainLayout.SuspendLayout();
             this.contentLayout.SuspendLayout();
             this.menuLayout.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.headerLayout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgConfig)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgIrSat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgDescargar)).BeginInit();
+            this.headerLayout.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainLayout
@@ -178,6 +178,44 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(173, 453);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = global::xmldwnld.Properties.Resources.import;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 153);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(19, 44);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
+            // imgConfig
+            // 
+            this.imgConfig.Image = global::xmldwnld.Properties.Resources.tools;
+            this.imgConfig.Location = new System.Drawing.Point(3, 103);
+            this.imgConfig.Name = "imgConfig";
+            this.imgConfig.Size = new System.Drawing.Size(19, 44);
+            this.imgConfig.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgConfig.TabIndex = 6;
+            this.imgConfig.TabStop = false;
+            this.imgConfig.Click += new System.EventHandler(this.btnConfig_Click);
+            // 
+            // imgIrSat
+            // 
+            this.imgIrSat.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.imgIrSat.Image = global::xmldwnld.Properties.Resources.go_to_web;
+            this.imgIrSat.Location = new System.Drawing.Point(3, 53);
+            this.imgIrSat.Name = "imgIrSat";
+            this.imgIrSat.Size = new System.Drawing.Size(19, 44);
+            this.imgIrSat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgIrSat.TabIndex = 5;
+            this.imgIrSat.TabStop = false;
+            this.imgIrSat.Click += new System.EventHandler(this.btnIrSat_Click);
+            // 
             // btnDescargaXML
             // 
             this.btnDescargaXML.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -250,6 +288,20 @@
             this.btnConfig.UseVisualStyleBackColor = false;
             this.btnConfig.Click += new System.EventHandler(this.btnConfig_Click);
             // 
+            // imgDescargar
+            // 
+            this.imgDescargar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.imgDescargar.Image = global::xmldwnld.Properties.Resources.download__1_;
+            this.imgDescargar.Location = new System.Drawing.Point(3, 3);
+            this.imgDescargar.Name = "imgDescargar";
+            this.imgDescargar.Size = new System.Drawing.Size(19, 44);
+            this.imgDescargar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgDescargar.TabIndex = 4;
+            this.imgDescargar.TabStop = false;
+            this.imgDescargar.Click += new System.EventHandler(this.btnDescargaXML_Click);
+            // 
             // lblVersion
             // 
             this.lblVersion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -315,18 +367,16 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSalir.BackColor = System.Drawing.Color.Red;
             this.btnSalir.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.Color.White;
-            this.btnSalir.Location = new System.Drawing.Point(1084, 3);
+            this.btnSalir.Location = new System.Drawing.Point(1105, 3);
             this.btnSalir.Name = "btnSalir";
             this.headerLayout.SetRowSpan(this.btnSalir, 2);
-            this.btnSalir.Size = new System.Drawing.Size(67, 17);
+            this.btnSalir.Size = new System.Drawing.Size(25, 17);
             this.btnSalir.TabIndex = 4;
-            this.btnSalir.Text = "salir";
+            this.btnSalir.Text = "X";
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
@@ -344,58 +394,6 @@
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "V 0.0.01";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::xmldwnld.Properties.Resources.import;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 153);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(19, 44);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            // 
-            // imgConfig
-            // 
-            this.imgConfig.Image = global::xmldwnld.Properties.Resources.inbox;
-            this.imgConfig.Location = new System.Drawing.Point(3, 103);
-            this.imgConfig.Name = "imgConfig";
-            this.imgConfig.Size = new System.Drawing.Size(19, 44);
-            this.imgConfig.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imgConfig.TabIndex = 6;
-            this.imgConfig.TabStop = false;
-            this.imgConfig.Click += new System.EventHandler(this.btnConfig_Click);
-            // 
-            // imgIrSat
-            // 
-            this.imgIrSat.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.imgIrSat.Image = global::xmldwnld.Properties.Resources.go_to_web;
-            this.imgIrSat.Location = new System.Drawing.Point(3, 53);
-            this.imgIrSat.Name = "imgIrSat";
-            this.imgIrSat.Size = new System.Drawing.Size(19, 44);
-            this.imgIrSat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imgIrSat.TabIndex = 5;
-            this.imgIrSat.TabStop = false;
-            this.imgIrSat.Click += new System.EventHandler(this.btnIrSat_Click);
-            // 
-            // imgDescargar
-            // 
-            this.imgDescargar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.imgDescargar.Image = global::xmldwnld.Properties.Resources.download__1_;
-            this.imgDescargar.Location = new System.Drawing.Point(3, 3);
-            this.imgDescargar.Name = "imgDescargar";
-            this.imgDescargar.Size = new System.Drawing.Size(19, 44);
-            this.imgDescargar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imgDescargar.TabIndex = 4;
-            this.imgDescargar.TabStop = false;
-            this.imgDescargar.Click += new System.EventHandler(this.btnDescargaXML_Click);
             // 
             // xmldwnld
             // 
@@ -420,12 +418,12 @@
             this.menuLayout.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.headerLayout.ResumeLayout(false);
-            this.headerLayout.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgConfig)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgIrSat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgDescargar)).EndInit();
+            this.headerLayout.ResumeLayout(false);
+            this.headerLayout.PerformLayout();
             this.ResumeLayout(false);
 
         }

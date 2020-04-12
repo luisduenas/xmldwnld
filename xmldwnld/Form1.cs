@@ -99,18 +99,33 @@ namespace xmldwnld
                     WebClient wc = new WebClient();
                     wc.Headers.Add("Cookie: " + cookies);
                     wc.Headers.Add("Content-Type", "application/x-www-form-urlencoded");
+
+
+                    if (string.IsNullOrWhiteSpace(Properties.Settings.Default["downloadPath"].ToString()))
+                    {
+                        MessageBox.Show($"Primero configure una carpeta de descargas");
+
+                        return;
+                    }
+                    if (!Directory.Exists(Properties.Settings.Default["downloadPath"].ToString()))
+                    {
+                        Directory.CreateDirectory(Properties.Settings.Default["downloadPath"].ToString());
+                    }
                     foreach (var file in urls)
                     {
                         wc.DownloadFile(file.Value, $@"{Properties.Settings.Default["downloadPath"]}\{file.Key}.xml");
                         pbDownload.Value += 1;
                     }
-                    pbDownload.Visible = false;
                     MessageBox.Show($"Descarga finalizada!, se descargaron {urls.Count} archivos en {Properties.Settings.Default["downloadPath"]} ");
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Ocurrio un error en la descarga");
+            }
+            finally
+            {
+                pbDownload.Visible = false;
             }
         }
         private void createExcel()
@@ -145,7 +160,9 @@ namespace xmldwnld
                     }
                     else
                     {
-                        MessageBox.Show($"No se selecciono ninguna carpeta, se guardara en la carpeta anterior({Properties.Settings.Default["xlsExportPath"]})");
+                        MessageBox.Show($"No se selecciono ninguna carpeta, se guardara en la carpeta de descargas({Properties.Settings.Default["xmlFilesPath"]})");
+                        Properties.Settings.Default["xlsExportPath"] = Properties.Settings.Default["xmlFilesPath"].ToString();
+                        Properties.Settings.Default.Save(); // Saves settings in application configuration file
                     }
                 }
 
@@ -364,7 +381,7 @@ namespace xmldwnld
                 }
                 wsSheet.Protection.IsProtected = false;
                 wsSheet.Protection.AllowSelectLockedCells = false;
-                ExcelPkg.SaveAs(new FileInfo($@"{Properties.Settings.Default["xlsExportPath"].ToString()}\Facturas-{DateTime.Now.ToShortDateString()}.xlsx"));
+                ExcelPkg.SaveAs(new FileInfo($@"{Properties.Settings.Default["xlsExportPath"].ToString()}\Facturas-{DateTime.Now.ToString("yyyy-MM-dd")}.xlsx"));
                 MessageBox.Show("Importación finalizada!");
             }
             catch (Exception ex)
