@@ -93,6 +93,7 @@ namespace xmldwnld
                 else if (MessageBox.Show($"Quieres descargar {urls.Count} XML's ?", "Aviso", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     pbDownload.Minimum = 0;
+                    pbDownload.Value = 0;
                     pbDownload.Maximum = folios.Count;
                     pbDownload.Visible = true;
                     var cookies = FullWebBrowserCookie.GetCookieInternal(webbrowser.Url, false);
@@ -322,6 +323,7 @@ namespace xmldwnld
 
                 //Console.WriteLine("Iniciando migracion a excel...");
                 pbDownload.Minimum = 0;
+                pbDownload.Value = 0;
                 pbDownload.Maximum = files.Length;
                 pbDownload.Visible = true;
 
